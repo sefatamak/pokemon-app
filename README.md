@@ -1,85 +1,76 @@
-# React Native Test Case Project
+# Pokemon Cards Application
 
-This project is a sample application built with React Native and Expo. It demonstrates modern React Native ecosystem practices including components, navigation, state management, and testing workflows.
+This application is a React Native app that lists Pokemon cards, shows their details, and provides a favorite feature.
 
-## Table of Contents
-- [Installation](#installation)
-- [Development](#development)
-- [Testing](#testing)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
+## Technologies and Libraries Used
+
+### Core Technologies
+- **React Native**: Cross-platform mobile application development framework
+- **TypeScript**: JavaScript superset that provides type safety
+- **Expo**: Platform for developing and distributing React Native applications
+
+### State Management
+- **Redux Toolkit**: State management library used to manage application state
+  - Used for managing favorite cards
+  - Manages API calls with async thunks
+
+### Navigation
+- **React Navigation**: Library used for managing page transitions and navigation structure
+  - Provides page transitions with Stack Navigator
+  - TypeScript integration for type-safe navigation
+
+### UI Components and Styling
+- **Expo Image**: Library that provides advanced image loading and caching features
+- **@shopify/flash-list**: Library used for high-performance list view
+  - Provides better performance with large lists
+  - Automatic pagination and loading features
+
+### Data Management
+- **Axios**: Library used for HTTP requests
+  - Used for communication with Pokemon API
+- **AsyncStorage**: Library used for local storage
+  - Used for storing favorite cards on device
+
+### Testing
+- **Jest**: Test framework
+- **@testing-library/react-native**: Library used for testing React Native components
+- **@testing-library/react-hooks**: Library used for testing React hooks
+
+### Development Tools
+- **Babel**: Tool used for compiling JavaScript/TypeScript code
+  - Manages aliases with module resolver
+- **TypeScript**: Provides type checking and enhanced IDE support
+
+## Project Structure
+
+```
+src/
+├── api/          # API requests and configuration
+├── components/   # Reusable UI components
+├── constants/    # Constants
+├── hooks/        # Custom React hooks
+├── navigation/   # Navigation configuration
+├── screens/      # Application screens
+├── store/        # Redux store configuration
+├── theme/        # Theme and style definitions
+└── types/        # TypeScript type definitions
+```
 
 ## Installation
 
-1. **Clone the repository:**
-   ```sh
-   git clone <repo-url>
-   cd test-case
-   ```
-2. **Install dependencies:**
-   ```sh
-   yarn install
-   # or
-   npm install
-   ```
-3. **Create environment files if needed:**
-   If your project requires environment variables, create a `.env` file in the root directory.
-
-## Development
-
-To start the project:
-```sh
-# Start with Expo
-yarn start
-# or
-npm run start
+1. Clone the project
+2. Install dependencies:
+```bash
+yarn install
 ```
-
-To run on Android/iOS/Web:
-```sh
-yarn android
-yarn ios
-yarn web
+3. Start the application:
+```bash
+yarn start
 ```
 
 ## Testing
 
 To run tests:
-```sh
+```bash
 yarn test
-```
-
-> The project uses Jest and Testing Library for unit tests. All necessary mocks and setup are defined in the `jest.setup.js` file.
-
-## Project Structure
-
-```
-├── __tests__                # Test files
-├── src                      # Application source code
-│   ├── api                  # API and services
-│   ├── components           # React components
-│   ├── constants            # Constants
-│   ├── hooks                # Custom hooks
-│   ├── navigation           # Navigation
-│   ├── screens              # Screens
-│   ├── store                # Redux store and slices
-│   ├── theme                # Theme and styles
-│   └── types                # Type definitions
-├── package.json             # Project dependencies and scripts
-├── babel.config.js          # Babel configuration
-├── jest.setup.js            # Jest test environment setup
-├── .gitignore               # Files ignored by git
-└── README.md                # Project documentation
-```
-
-## Contributing
-
-1. Fork the repository and create a new branch.
-2. Make your changes.
-3. Ensure all tests pass.
-4. Open a pull request.
-
-## License
-
-This project is licensed under the MIT License. 
+``` 
